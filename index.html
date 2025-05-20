@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Driving Distance Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="distance-calculator">
+    <h2>Driving Distance Calculator (USA Cities)</h2>
+
+    <label for="fromCity">From:</label>
+    <input type="text" id="fromCity" placeholder="Type a city..." onkeyup="suggestCities(this.value, 'fromList', 'fromCity')">
+    <div id="fromList" class="suggestions"></div>
+
+    <label for="toCity">To:</label>
+    <input type="text" id="toCity" placeholder="Type a city..." onkeyup="suggestCities(this.value, 'toList', 'toCity')">
+    <div id="toList" class="suggestions"></div>
+
+    <button onclick="calculateDistance()">Calculate Distance</button>
+    <div id="result"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
